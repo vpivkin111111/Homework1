@@ -97,8 +97,8 @@ Email: <input type="text" name="email">
 <p>Demonstrate fadeIn() with different parameters.</p>
 <button>Click to fade in boxes</button>
 <br><br>
-<div id="div1" style="width:80px;height:80px;display:none;backgroundcolor:red;"></div><br>
-<div id="div2" style="width:80px;height:80px;display:none;backgroundcolor:green;"></div><br>
+<div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+<div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
 <div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
 </body>
 </html>
@@ -112,12 +112,6 @@ Email: <input type="text" name="email">
 <html>
 <body>
 <script src="http://code.jquery.com/jquery.js"></script>
-<a href="http://wikipedia.ru">Википедия</a>
-<ul>
- <li><a href="http://jquery.com">jQuery</a></li>
- <li><a href="http://sizzlejs.com">Sizzle</a></li>
- <li><a href="http://blog.jquery.com">jQuery Blog</li>
-</ul>
 <script>
  var links = $('li a'); // найти все ссылки на странице внутри LI
  links.each(function (i, a) {
@@ -129,3 +123,116 @@ Email: <input type="text" name="email">
 </html>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-latest.js">
+</script>
+<script>
+ $(document).ready(function () {
+ $("#p1").mouseenter(function () {
+ alert("You entered p1!");
+ });
+ });
+</script>
+</head>
+<body>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-latest.js">
+</script>
+<script>
+ $(document).ready(function () {
+ $("#flip").click(function () {
+ $("#panel").slideDown("slow");
+ });
+ });
+</script>
+<style type="text/css">
+#panel,#flip
+{
+padding:5px;
+text-align:center;
+background-color:#57792b;
+border:solid 1px #c3c3c3;
+}
+#panel
+{
+padding:50px;
+display:none;
+}
+</style>
+</head>
+<body>
+<div id="flip">Click to slide down panel</div>
+<div id="panel">Hello world!</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-latest.js">
+</script>
+<script>
+ $(document).ready(function () {
+ $("button").click(function () {
+ $("div").animate({ left: '250px' });
+ });
+ });
+</script>
+</head>
+<body>
+<button>Start Animation</button>
+<p>By default, all HTML elements have a static position, and cannot be moved. To
+manipulate the position, remember to first set the CSS position property of the element
+to relative, fixed, or absolute!</p>
+<div style="background:#98bf21;height:100px;width:100px;position:absolute;">
+</div>
+</body>
+</html>
