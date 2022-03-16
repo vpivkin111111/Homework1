@@ -1,58 +1,73 @@
+<!DOCTYPE html>
 <html>
 <head>
-<script src="http://yandex.st/jquery/1.7.2/jquery.min.js"></script>
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        table {
+            border-collapse: collapse;
+            /* объединяем границы ячеек в одну */
+            margin-top: 0.5em;
+            /* отступ сверху */
+        }
+ 
+        td,
+        th {
+            border: 1px solid gray;
+            /* задаем сплошную границу размером 1 пикселей цвета gray */
+            width: 50px;
+            /* ширина ячеек */
+            height: 30px;
+            /* высота ячеек */
+            text-align: center;
+            /* горизонтальное выравнивание по центру */
+        }
+    </style>
 </head>
 <body>
-    <p>Текст, который нельзя копировать!</p>
-</body>
-<script type="text/javascript">
-$("body").on("contextmenu", false);
-$('#contacts tbody tr').contextMenu('myMenu1', {
-    bindings: {
-      'sms': function(t) {},
-      'delete': function(t) {}
-    } 
- });
- function openContextMenu(event) {
-    event.preventDefault();
-    $("#custom-menu")
-        .css({
-        top: event.pageY + "px",
-        left: event.pageX + "px"
-    })
-        .show(100);
-    isContextMenuOpen = true;
-}
-
-
-function closeContextMenu(event) {
-    console.log("Click called on document");
-    if (isContextMenuOpen) {
-        $("custom-menu").hide();
-        console.log("Hide the context menu");
-    }
-
-
-
-    isContextMenuOpen = false;
-}
-
-
-
-function registerMenu() {
-
-
-
-    $(document).on({
-        contextmenu: function (event) {
-            openContextMenu(event);
-        },
-        click: function (event) {
-            closeContextMenu(event);
+    <button type="button" id="hide">Hide</button>
+    <button type="button" id="show">Show</button>
+ 
+    <table>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+    </table>
+    <script>
+        $("#hide").click(hide_click);
+        $("#show").click(show_click);
+ 
+        function hide_click(event) {
+            $("tr:odd").hide(); // odd - четные, но нумерация с нуля
         }
-    });
-}
-
-
-</script>
+        function show_click(event) {
+            $("tr:odd").show(); // odd - нечетные, но нумерация с нуля
+        }
+    </script>
+</body>
 </html>
