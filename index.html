@@ -1,24 +1,30 @@
-<form>
-    <label for="sex">Ваш пол (F, M):</label>
-    <input id="sex" name="sex" type="text" required />
-    <button type="submit">GO!</button>
-  </form>
-  <output></output>
-  <script type="text/javascript">
-    function checkSex(sex) {
-      if (sex === 'F') {
-        return 'Ваш пол женский';
-      } else if (sex === 'M') {
-        return 'Ваш пол мужской';
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Программа сложения двух чисел</title>
+
+    <script>
+      function addition() {
+        var a = parseInt(document.getElementById("a").value);
+        var b = parseInt(document.getElementById("b").value);
+
+        if (isNaN(a) == true) a = 0;
+        if (isNaN(b) == true) b = 0;
+
+        var c = a + b;
+
+        document.getElementById("result").innerHTML = a + " + " + b + " = " + c;
       }
-   
-      return 'Ваш пол не определён';
-    }
-   
-    document.querySelector('form').addEventListener('submit', function(event) {
-      event.preventDefault();
-   
-      document.querySelector('output').textContent = checkSex(this.sex.value);
-    });
-   
-  </script>
+    </script>
+  </head>
+  <body>
+    <form>
+      <input id="a" type="text" value="" /><br />
+      <input id="b" type="text" value="" /><br />
+      <input type="button" value="Сложить 2 два числа" onclick="addition();" /><br />
+    </form>
+    <div id="result"></div>
+  </body>
+</html>
