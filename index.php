@@ -1,4 +1,36 @@
-<?php
-$arr = [2, 5, 3, 9];
-$result = $arr[0] * $arr[1] + $arr[2] * $arr[3];
-echo $result;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+</head>
+<body>
+ <href= model.php>    
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
