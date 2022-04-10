@@ -1,7 +1,9 @@
 <html>
     <head>
     <title>Регистрация</title>
-    </head>
+    <html lang="ru">
+    <meta charset="UTF-8">
+</head>
     <body>
     <h2>Регистрация</h2>
     <form action="save_user.php" method="post">

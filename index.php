@@ -3,9 +3,13 @@
     session_start();
     ?>
     <html>
-    <head>
-    <title>Главная страница</title>
-    </head>
+       <head>
+       <html lang="ru">
+       <meta charset="UTF-8">
+      
+       <title>Главная страница</title>
+           
+            </head>
     <body>
     <h2>Главная страница</h2>
     <form action="testreg.php" method="post">
